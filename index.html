@@ -1,122 +1,49 @@
-<!doctype html>
+
+
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="./assets/css/style.css" type="text/css">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta content="Danielle Boenisch portfolio" name="description">
-    
-    <title>Danielle Boenisch Portfolio</title>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>My Website</title>
+    <link rel="stylesheet" href="./assets/css/form.css">
   </head>
   <body>
-    <header class="header">
-      <div class="pagename" >
-        <h1>DANIELLE BOENISCH</h1>
+    <div class="container">
+    <main class="header">
+        <h1>Enter New Post</h1>  
+    </main>
+    
+    <form method="post">
+      <div class="input-data">
+        <label for="Username" >Username:<br></label>
+        <input type="text" id="username" name="Username:" required>
       </div>
-      <nav>   
-        <ul>
-        <li><a href="#about">ABOUT</a></li>
-        <li><a href="#work">WORK</a></li>
-        <li><a href="#contact">BLOG</a></li>
-        <li><a href="#contact">CONTACT</a></li>
-
-      </ul>
-        </nav>
-            </header>
-            
-  <main class="hero" class="hero-subtitle">
-        <section class="user-image" >
-        <img src="./assets/Girl.jpeg" width="300" height="300"></section>
-          <div class="bottom-right">PRODUCT MANAGEMENT AND DEVELOPMENT</div>
-      </main>
- 
-<div class="details">
-        <div class="item1">
-        <h2 id="about">ABOUT</h2>
+        <br>
+        <div class="input-data">
+        <label for="Title" >Blog Title:<br></label>
+        <input type="text" id="blogtitle" name="Title" required>
       </div>
-        <div class="item2">
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Sagittis eu volutpat odio facilisis mauris sit amet massa vitae. Massa sapien faucibus et molestie ac feugiat. Gravida neque convallis a cras semper auctor. In eu mi bibendum neque egestas congue quisque. Nibh mauris cursus mattis molestie a. Massa id neque aliquam vestibulum morbi blandit.</p>
-      </div>
-       
-        <div class="item3">
-          <h2 id="work">WORK</h2>
-        </div> 
-        
-      <div class="item4">
-        <section class="row">
-          <div class="column1"  id="app1">
-            <a href="https://danielleboe.github.io/module-1-challenge/">
-            <img src="./assets/horiseon.png" class="image-container" alt="application name 1" style="width:100%"> </a>
-            <div class="application">
-              <h3>HORISEON</h3>
-                  <h4>HTML/CSS</h4>
-            </div>
-          </div>
-
-        </section>  
-        <section class="row">
-          <div class="column"  id="app2">
-            <a href="https://git.bootcampcontent.com/">
-            <img src="./assets/success.jpg" class="image-container" alt="application name 2" style="width:100%"> </a>
-            <div class="application">
-              <h3>APPLICATION 2</h3>
-              <h4>CODING LANGUAGE</h4>
-            </div>
-          </div>
-          <div class="column"  id="app3">
-            <a href="https://git.bootcampcontent.com/">
-            <img src="./assets/wixgoodadvice.jpg" class="image-container" alt="application name 3" style="width:100%"> </a>
-            <div class="application">
-              <h3>APPLICATION 3</h3>
-              <h4>CODING LANGUAGE</h4>
-            </div>
-          </div>
-        </section>  
-        <section class="row">
-          <div class="column"  id="app4">
-            <a href="https://git.bootcampcontent.com/">
-            <img src="./assets/newfirm-bootstrap-business-template.jpg.webp" class="image-container" alt="application name 4" style="width:100%"> </a>
-            <div class="application">
-              <h3>APPLICATION 4</h3>
-              <h4>CODING LANGUAGE</h4>
-        </div>
-          </div>
-          <div class="column"  id="app5">
-            <a href="https://git.bootcampcontent.com/">
-            <img src="./assets/newfirm-bootstrap-business-template.jpg.webp" class="image-container" alt="application name 5" style="width:100%"> </a>
-            <div class="application">
-              <h3>Application 5</h3>
-              <h4>Coding Language</h4>
-        </div>
-        </section> 
-      </div>
-        <div class="item5">
-        <h2 id="contact">CONTACT</h2>
-      </div>
-        <div class="item6">
-          <ul>
-            <li><a href="mailto:danielleboenisch@gmail.com" >EMAIL</a></li>
-            <li><a href="tel:+1573-489-6938">PHONE</a></li>
-            <li><a href="https://github.com/danielleboe/">GITHUB</a></li>
-            <li><a href="https://www.linkedin.com/in/danielle-boenisch/">LINKEDIN</a></li>
-          </ul>
-      </div>
-      <div class="item7">
-        <h2 id="about">BLOG</h2>
-      </div>
-        <div class="item8">
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Sagittis eu volutpat odio facilisis mauris sit amet massa vitae. Massa sapien faucibus et molestie ac feugiat. Gravida neque convallis a cras semper auctor. In eu mi bibendum neque egestas congue quisque. Nibh mauris cursus mattis molestie a. Massa id neque aliquam vestibulum morbi blandit.</p>
-      </div>
-       
-
-</div>
-<script src="./assets/js/script.js"></script>
-<footer>
-  <p>&copy; DANIELLE BOENISCH 2024</p>
-</footer>
-
+        <br>
+        <div class="input-data">
+        <label for="Content" >Blog Content:<br></label>
+        <textarea name="message" id="content" cols="60" rows="6"></textarea>
+      </div>    
+        <div id="msg"></div>
+        <br>
+        <div id="'submit-button">
+        <button class="button" type="submit" value="Submit" id="submit">Submit
+        </button></div>
+    </form>
+  </div>
+    <footer>
+<p>&copy; Danielle Boensich 2024</p>
+    </footer>
+    <script src="./assets/js/form.js"></script>
 
   </body>
-  
 </html>
+
+
+  
