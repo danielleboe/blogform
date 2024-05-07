@@ -34,10 +34,8 @@ body {
     text-align: center;
     font-size: 40px;
     font-weight: 200;
-    font-family: 'Poppins', Helvetica, 
-    Arial, sans-serif;
+    font-family: 'Poppins', Helvetica, Arial, sans-serif;
     background:black;
-     /* -webkit-linear-gradient(right, #56d8e4, #9f01ea, #56d8e4, #9f01ea); */
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
   }
@@ -46,12 +44,8 @@ body {
 form {
     display:flex;
     flex-direction: column;
-    /* align-items: center; */
     justify-content: space-between;
-    /* line-height: 1; */
-    /* height: 500px; */
-    font-family: 'Poppins', Helvetica, 
-    Arial, sans-serif;
+    font-family: 'Poppins', Helvetica, Arial, sans-serif;
 }
 
 input,textarea{
