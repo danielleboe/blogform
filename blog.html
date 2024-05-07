@@ -4,15 +4,24 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>My Website</title>
-    <link rel="stylesheet" href=".assets/css/blog.css">
+    <title>Danielle Boenisch Blog</title>
+    <link rel="stylesheet" href="./assets/css/styles.css">
+    <link rel="stylesheet" href="./assets/css/blog.css">
   </head>
   <body>
+    <section class = "container dark">
+      <section class = "content">
     <main class = "header">
-        <h1>Welcome to My Blog</h1>  
+      <div class="toggle"><label class="switch">
+        <input type="checkbox"  id="theme-switcher">
+        <span class="slider round"></span>
+      </label></div>
+        <div class="headline">
+        <h1>Danielle Boenisch Blog</h1>  
+      </div>
     </main>
-  <div class="row">
-    <div class="leftcolumn">
+  
+    <div class="posts">
       <div class="card">
         <a href="https://alphagov.github.io/accessibility-tool-audit/test-cases.html#content" target="_blank"><h2>TITLE HEADING</h2></a>
         <p>Some text..</p>
@@ -35,12 +44,17 @@
       </div>
     </div>
     
-  </div>
-  
-  <div class="footer">
-    <h2>Footer</h2>
-  </div>
 
-  <script src=".assets/js/blog.js"></script>
+
+  
+  <footer class="footer">
+    <p>&copy; Danielle Boenisch 2024</p>
+    <p>See Danielle's Portfolio</p>
+  </footer>
+  <script src="./assets/js/logic.js"></script>
+
+  <script src="./assets/js/blog.js"></script>
+</section>
+</section>
   </body>
 </html>
