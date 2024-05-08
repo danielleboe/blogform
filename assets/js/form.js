@@ -13,24 +13,35 @@ submit.addEventListener('click', function (event) {
   event.preventDefault();
 
 const username = usernameInput.value;
-console.log('form submitted+++++++++++', username.value);
-
 const blogtitle = titleInput.value;
 const blogcontent = contentInput.value;
-
+const blogForm = document.getElementById("blogForm");
+let isError = false;
 
   if (username.trim() === '' || !username) {
     console.log('username+++++',username);
     displayMessage('error', 'Username cannot be blank');
+    isError = true;
   } else if (blogtitle.trim() === ''  || !blogtitle) {
     displayMessage('error', 'Title cannot be blank');
-} else if (blogcontent.trim() === '' || !blogcontent) {
+    isError = true;
+  } else if (blogcontent.trim() === '' || !blogcontent) {
     displayMessage('error', 'Content cannot be blank');
+    isError = true;
   } else {
     displayMessage('success', 'Submitted successfully');
   }
 
-  localStorage.setItem('usernameInput',username);
-  localStorage.setItem('titleInput',blogtitle);
-  localStorage.setItem('contentInput',blogcontent);
+
+
+// if there is not an error then set to local storage, reset the form and redirect to the blog page
+  if (!isError) {
+    localStorage.setItem('usernameInput',username);
+    localStorage.setItem('titleInput',blogtitle);
+    localStorage.setItem('contentInput',blogcontent);
+    blogForm.reset();
+    window.location.href = "blog.html";
+  }
+
+  
 } ); 
