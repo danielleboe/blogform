@@ -4,3 +4,11 @@
 // render posts in reverse-chron order (datestamp)
 
 // 
+
+const backbutton = document.getElementById("backbutton");
+
+backbutton.addEventListener('click', function(event) {
+history.back();
+}
+
+)
