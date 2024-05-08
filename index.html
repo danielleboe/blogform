@@ -6,7 +6,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>My Website</title>
+    <title>Create New Post</title>
     <link rel="stylesheet" href="./assets/css/form.css">
   </head>
   <body>
@@ -18,17 +18,17 @@
     <form method="post">
       <div class="input-data">
         <label for="Username" >Username:<br></label>
-        <input type="text" id="username" name="Username:" required>
+        <input type="text" id="username" name="Username:" autocomplete="username" required>
       </div>
         <br>
         <div class="input-data">
         <label for="Title" >Blog Title:<br></label>
-        <input type="text" id="blogtitle" name="Title" required>
+        <input type="text" id="blogtitle" name="Title" autocomplete="off" required>
       </div>
         <br>
         <div class="input-data">
         <label for="Content" >Blog Content:<br></label>
-        <textarea name="message" id="content" cols="60" rows="6"></textarea>
+        <textarea name="message" id="blogcontent" cols="60" rows="10" autocomplete="off" ></textarea>
       </div>    
         <div id="msg"></div>
         <br>
@@ -38,7 +38,7 @@
     </form>
   </div>
     <footer>
-<p>&copy; Danielle Boensich 2024</p>
+<p>&copy; Danielle Boenisch 2024</p>
     </footer>
     <script src="./assets/js/form.js"></script>
 
