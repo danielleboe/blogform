@@ -29,6 +29,7 @@
     background-color: #ccc;
     -webkit-transition: .4s;
     transition: .4s;
+    
   }
   
   .slider:before {
@@ -76,6 +77,23 @@
   }
 
 /* Dark Mode */
+
+.dark .slider:before{
+  content:"☾";
+  text-align: center;
+  font-size: 14px;
+  margin:auto;
+  color:black;
+}
+
+.light .slider:before{
+  content:"𖤓";
+  text-align: center;
+  font-size: 14px;
+  margin:auto;
+  color:black;
+}
+
 .dark {
   background-color: black;
   height: 100vh;
