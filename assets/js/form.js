@@ -35,13 +35,41 @@ let isError = false;
 
 
 // if there is not an error then set to local storage, reset the form and redirect to the blog page
-  if (!isError) {
-    localStorage.setItem('usernameInput',username);
-    localStorage.setItem('titleInput',blogtitle);
-    localStorage.setItem('contentInput',blogcontent);
-    blogForm.reset();
-    window.location.href = "blog.html";
-  }
+  // if (!isError) {
+  //   localStorage.setItem('usernameInput',username);
+  //   localStorage.setItem('titleInput',blogtitle);
+  //   localStorage.setItem('contentInput',blogcontent);
+  //   blogForm.reset();
+  //   window.location.href = "blog.html";
+  // }
 
+// add dttm field
+if (!isError) {
+
+// declare variable for the json object for indiviual post
+const singlePost = {
+  username: username,
+  blogtitle: blogtitle,
+  blogcontent: blogcontent,
+  dttm: new Date()
+};
+
+// declare variable for parent
+ // add to single post to existing json array
+let parentPost = [];
+  const existingPosts = JSON.parse(localStorage.getItem('parentPost'));
+
+  //if parentpost exists then add to existing last post
+  if (existingPosts !== null) {
+     parentPost = existingPosts;
+  }
   
-} ); 
+  parentPost.push(singlePost);
+
+//localStorage set item json.stringify()
+  localStorage.setItem('parentPost', JSON.stringify(parentPost));
+  blogForm.reset();
+  window.location.href = "blog.html";
+}
+
+}); 
