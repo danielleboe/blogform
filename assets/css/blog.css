@@ -39,14 +39,29 @@ body{
     font-size: 40px;
     font-weight: 200;
     font-family: 'Poppins', Helvetica, Arial, sans-serif;
-    height:auto;
+    height:auto
   }
 
+.top-nav{
+  display:block;
+  align-items: center;
+}
+
+.back-container {
+  float:right;
+  margin: 5px;
+}
+
+.toggle {
+  float:right;
+  margin: 5px;
+}
 
 .card {
     margin: 40px;
-
 }
+
+
 
 .posts{
     margin: 20px;

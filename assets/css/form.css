@@ -1,48 +1,77 @@
 @import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap');
 
-body {
-    color:black;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    min-height: 100vh;
-    padding: 10px;
-    font-family: 'Poppins', Helvetica, 
-    Arial, sans-serif;
-    background: black;
-    /* linear-gradient(115deg, #56d8e4 10%, #9f01ea 90%); */
-    margin: 0;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; /* Recommended for consistent box model */
+}
+
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.container, .shell, .content {
+  height: 100%;
+}
+
+.shell {
+  height: 100%;
+  width: 100%;
 }
 
 .container {
-    max-width: 800px;
-    background: #fff;
-    /* width: 800px; */
-    padding: 20px;
+    display:flex;
+    /* flex-direction: column; */
     box-shadow: 0px 0px 10px rgba(0,0,0,0.1);
     flex: 1; /* This allows the container to grow and push the footer down */
-    padding-bottom: 50px; /* Adjust this value to create space for the footer */
-
+    /* padding-bottom: 20px;  */
+    /* Adjust this value to create space for the footer */
+    margin:0;
+    width:auto;
 }
 
-/* .container form{
-    padding: 30px 0 0 0;
-  } */
-  
-  /* Header */
-  .container main{
+  .content{
+    display: flex;
+    flex-direction:column;
+    width:100%;
+    margin:0;
+    height:100%;
+    justify-content: center;
+  }
+
+.header {
     text-align: center;
-    font-size: 40px;
+    font-size: 250%;
     font-weight: 200;
     font-family: 'Poppins', Helvetica, Arial, sans-serif;
-    background:black;
     -webkit-background-clip: text;
     background-clip: text;
-    color: transparent;
-    -webkit-text-fill-color: transparent;
+    color:black;
+    /* color: transparent; */
+    /* -webkit-text-fill-color: transparent; */
   }
-  
+
+ .carafe{
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
+  width:100%;
+  max-width: 800px;
+  height:auto;
+  background-color: #DDDDDD;
+  margin: 5% auto; /* Center horizontally */
+  margin-top:1%;
+  margin-bottom:1%;
+ } 
+
+ @media (max-width: 768px) {
+  .carafe {
+      width: 95%; /* Adjust as needed for smaller screens */
+      max-width: none; /* Remove max-width to allow full width on smaller screens */
+  }
+}
 
 form {
     font-family: 'Poppins', Helvetica, Arial, sans-serif;
@@ -51,20 +80,24 @@ form {
 
 .input-data{
     text-align: left;
-
+    font-family: 'Poppins', Helvetica, Arial, sans-serif;
+    color:black;
+    margin-left:10%;
+    width:80%;
 }
 
-input,textarea{
-    width: 90%;
-    padding: 12px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    resize: vertical;
+.field{
+  font-family: 'Poppins', Helvetica, Arial, sans-serif;
+  width: 90%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  resize: vertical;
 }
 
 #msg {
     visibility: hidden;
-    margin-top: 20px;
+    margin-top: 10px;
     font-weight: 700;
     height: 1.2em;
     font-size: 1.2em;
@@ -104,6 +137,8 @@ input,textarea{
   user-select: none;
   -webkit-user-select: none;
   touch-action: manipulation;
+  margin-bottom:5%;
+  margin-top:2%;
 }
 
 .button:focus {
@@ -136,13 +171,12 @@ input,textarea{
   display: flex;
   justify-content: center;
   margin-top: 20px;
-  
+  margin-bottom:20px;
 }
-
 
 footer {
     margin-top: auto; /* This pushes the footer to the bottom */
-    background: transparent;
+    margin-bottom:auto;
     text-align: center;
-    color: white;
+    font-family: 'Poppins', Helvetica, Arial, sans-serif;
 }
