@@ -20,7 +20,7 @@ for (const singlePost of lastPost) {
     const content1 = document.createElement('p');
     const username1 = document.createElement('p');
     
-    title1.textContent = singlePost.blogcontent;
+    title1.textContent = singlePost.blogtitle;
     content1.textContent = singlePost.blogcontent;
     username1.textContent = `Posted By: ${singlePost.username}`;
     

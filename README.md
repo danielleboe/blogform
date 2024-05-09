@@ -1,8 +1,8 @@
-# 02 Advanced CSS: Portfolio
+## Blog and Blog Content Form
 
 ## Location
 Repository: https://github.com/danielleboe/myblog
-Portfolio URL: https://danielleboe.github.io/myblog
+Product URL: https://danielleboe.github.io/blogform/
 
 
 ## Your Task
@@ -116,24 +116,19 @@ You are required to submit BOTH of the following for review:
 * The URL of the GitHub repository that contains your code. Give the repository a unique name and include a README file that describes the project.
 
 
+# Final Product
 
-# Requirements
+## Screen Shots
 
-## Your file structure should look like the following:
+![Create a new post](/assets/Screenshot%202024-05-09%20at%205.17.16 PM.png "Create a New Post")
 
-my-blog
-├── assets
-│   ├── css
-│   │   ├── blog.css
-│   │   ├── form.css
-│   │   └── styles.css
-│   └── js
-│       ├── blog.js
-│       ├── form.js
-│       └── logic.js
-├── index.html
-├── blog.html
-└── README.md
+![Show Error Message](/assets/Error-Message.png "Error Message")
+
+![Blog Page](/assets/Danielle-Boenisch-Blog.png "Blog Page")
+
+## Demo Video
+[![Demo Video](/assets/demo%20video.png)](https://drive.google.com/file/d/11xAMqciSdjpJ4E6mMXYzD27nD43Cu9TZ/view?usp=sharing)
+
 
 - - -
 © 2024 edX Boot Camps LLC. Confidential and Proprietary. All Rights Reserved.
