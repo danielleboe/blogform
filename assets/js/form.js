@@ -12,17 +12,17 @@ function displayMessage(type, message) {
 submit.addEventListener('click', function (event) {
   event.preventDefault();
 
-const username = usernameInput.value;
-const blogtitle = titleInput.value;
-const blogcontent = contentInput.value;
-const blogForm = document.getElementById("blogForm");
-let isError = false;
+  const username = usernameInput.value;
+  const blogtitle = titleInput.value;
+  const blogcontent = contentInput.value;
+  const blogForm = document.getElementById("blogForm");
+  let isError = false;
 
   if (username.trim() === '' || !username) {
-    console.log('username+++++',username);
+    console.log('username+++++', username);
     displayMessage('error', 'Username cannot be blank');
     isError = true;
-  } else if (blogtitle.trim() === ''  || !blogtitle) {
+  } else if (blogtitle.trim() === '' || !blogtitle) {
     displayMessage('error', 'Title cannot be blank');
     isError = true;
   } else if (blogcontent.trim() === '' || !blogcontent) {
@@ -32,44 +32,34 @@ let isError = false;
     displayMessage('success', 'Submitted successfully');
   }
 
+  // if there is not an error then create the array
 
+  // add dttm field
+  if (!isError) {
 
-// if there is not an error then set to local storage, reset the form and redirect to the blog page
-  // if (!isError) {
-  //   localStorage.setItem('usernameInput',username);
-  //   localStorage.setItem('titleInput',blogtitle);
-  //   localStorage.setItem('contentInput',blogcontent);
-  //   blogForm.reset();
-  //   window.location.href = "blog.html";
-  // }
+    // declare variable for the json object for indiviual post
+    const singlePost = {
+      username: username,
+      blogtitle: blogtitle,
+      blogcontent: blogcontent,
+      dttm: new Date()
+    };
 
-// add dttm field
-if (!isError) {
+    // declare variable for parent
+    // add to single post to existing json array
+    let parentPost = [];
+    const existingPosts = JSON.parse(localStorage.getItem('parentPost'));
 
-// declare variable for the json object for indiviual post
-const singlePost = {
-  username: username,
-  blogtitle: blogtitle,
-  blogcontent: blogcontent,
-  dttm: new Date()
-};
+    //if parentpost exists then add to existing last post
+    if (existingPosts !== null) {
+      parentPost = existingPosts;
+    }
 
-// declare variable for parent
- // add to single post to existing json array
-let parentPost = [];
-  const existingPosts = JSON.parse(localStorage.getItem('parentPost'));
+    parentPost.push(singlePost);
 
-  //if parentpost exists then add to existing last post
-  if (existingPosts !== null) {
-     parentPost = existingPosts;
+    //localStorage set item json.stringify()
+    localStorage.setItem('parentPost', JSON.stringify(parentPost));
+    blogForm.reset();
+    window.location.href = "blog.html";
   }
-  
-  parentPost.push(singlePost);
-
-//localStorage set item json.stringify()
-  localStorage.setItem('parentPost', JSON.stringify(parentPost));
-  blogForm.reset();
-  window.location.href = "blog.html";
-}
-
 }); 

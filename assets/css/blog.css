@@ -17,8 +17,7 @@ body{
     font-family: 'Poppins', Helvetica, 
     Arial, sans-serif;
     margin: 0;
-    max-width: 100%;
-    
+    max-width: 100%;  
 }
 
 .content{
@@ -31,7 +30,6 @@ body{
     flex: 1; /* This allows the container to grow and push the footer down */
     padding-bottom: 50px; /* Adjust this value to create space for the footer */
     flex-direction: row;
-
 }
 
 .content .header{
@@ -42,26 +40,9 @@ body{
     height:auto
   }
 
-.top-nav{
-  display:block;
-  align-items: center;
-}
-
-.back-container {
-  float:right;
-  margin: 5px;
-}
-
-.toggle {
-  float:right;
-  margin: 5px;
-}
-
 .card {
     margin: 40px;
 }
-
-
 
 .posts{
     margin: 20px;
