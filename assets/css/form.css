@@ -95,6 +95,8 @@ form {
   resize: vertical;
 }
 
+/* Error/success message */
+
 #msg {
   visibility: hidden;
   margin-top: 10px;
@@ -117,6 +119,7 @@ form {
   color: #e6252c;
 }
 
+/* Submit Button */
 .button {
   background-color: #3DD1E7;
   border: 0 solid #E5E7EB;
