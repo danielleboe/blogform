@@ -1,7 +1,7 @@
 ## Blog and Blog Content Form
 
 ## Location
-Repository: https://github.com/danielleboe/myblog
+Repository: https://github.com/danielleboe/blogform
 Product URL: https://danielleboe.github.io/blogform/
 
 
